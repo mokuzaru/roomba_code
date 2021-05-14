@@ -2,8 +2,10 @@ int motI = 10;
 int motD = 5;
 int dirI = 9;
 int dirD = 6;
-int t = 1000;
+int t = 500;
 int maxSpeed = 40;
+int x = 60;
+int y = 80;
 void setup() {
   Serial.begin(9600);
   for (int i = 5; i < 11; i++){
@@ -24,8 +26,8 @@ void loop() {
       digitalWrite(6,LOW);
       digitalWrite(9,HIGH);
       delay(50);
-      analogWrite(5,21);
-      analogWrite(10,21);
+      analogWrite(5,x);
+      analogWrite(10,x);
       delay(t);
       analogWrite(5,0);
       analogWrite(10,0);
@@ -37,8 +39,8 @@ void loop() {
       digitalWrite(6,HIGH);
       digitalWrite(9,LOW);
       delay(50);
-      analogWrite(5,21);
-      analogWrite(10,21);
+      analogWrite(5,x);
+      analogWrite(10,x);
       delay(t);
       analogWrite(5,0);
       analogWrite(10,0);
@@ -50,8 +52,8 @@ void loop() {
       digitalWrite(6,HIGH);
       digitalWrite(9,HIGH);
       delay(50);
-      analogWrite(5,21);
-      analogWrite(10,21);
+      analogWrite(5,y);
+      analogWrite(10,y);
       delay(t/2);
       analogWrite(5,0);
       analogWrite(10,0);
@@ -63,8 +65,8 @@ void loop() {
       digitalWrite(6,LOW);
       digitalWrite(9,LOW);
       delay(50);
-      analogWrite(5,21);
-      analogWrite(10,21);
+      analogWrite(5,y);
+      analogWrite(10,y);
       delay(t);
       analogWrite(5,0);
       analogWrite(10,0);
